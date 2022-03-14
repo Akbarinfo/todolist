@@ -5,31 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Todo List</title>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
-
-  <!-- HEADER PART -->
-
-  <header class="">
-    <section class="">
-
-    </section>
-  </header>
-
   <!-- MAIN PART  -->
-
   <main>
+    <section class="todo">
+      <div class="todo__box">
+        <div class="todo__header">
+          <h1 class="todo__title">Todo List
+          </h1>
+          <p class="todo__info">Get things done, one item at a time.</p>
+        </div>
 
+        <ul class="todo__list" id="id-list">
+
+          <div class="todo__itemnone" id="id-none">Your todo divst is empty.</div>
+        </ul>
+        <div class="todo__all">
+          <button class="todo__btns" id="id-all" type="button">All</button>
+          <button class="todo__btns" id="id-com" type="button">Complete</button>
+          <button class="todo__btns" id="id-incom" type="button">Incomplete</button>
+        </div>
+        <div class="todo__main">
+          <h2 class="todo__subtitle">Add to the todo list</h2>
+          <form class="todo__form">
+            <label for="text">
+              <input class="todo__input" type="text" name="text" id="text" placeholder="" required>
+              <button class="todo__btn" type="submit">Add Item</button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <!-- FOOTER PART  -->
-
-  <footer class="footer">
-
-  </footer>
 
   <script src="js/main.js"></script>
 </body>
