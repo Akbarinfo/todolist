@@ -1,10 +1,12 @@
 const elInputAdd = document.querySelector('input[type="text"]');
-const elForm = document.querySelector("form");
+const elInputSearch = document.querySelector('input[id="search"]');
+const elForm = document.querySelector("#form");
 const elList = document.querySelector("#id-list");
 const elItemNone = document.getElementById('id-none');
 const elAll = document.getElementById('id-all');
 const elCom = document.getElementById('id-com');
 const elIncom = document.getElementById('id-incom');
+
 
 
 elForm.addEventListener("submit", addItem);
@@ -91,7 +93,7 @@ function addItem(e, element){
 
   elItemNone.className = "none";
 
-}
+};
 
 
 // SORTLASH QISMI
@@ -128,4 +130,23 @@ elCom.addEventListener('click', ()=> {
         sortLi[i].style.display = 'flex';
       }
     }
-  })
+  });
+
+
+
+    // Search qismi
+
+elInputSearch.addEventListener('keyup', (text)=> {
+  let li = document.querySelectorAll('li');
+  let p = document.querySelectorAll('p');
+  let texts = text.target.value.toLowerCase();
+
+  for(let i = 0; i < li.length; i++) {
+    if(p[i].textContent.toLowerCase().indexOf(texts) != -1) {
+      li[i].style.display = "flex";
+    }
+    else {
+      li[i].style.display = "none";
+    }
+  }
+});

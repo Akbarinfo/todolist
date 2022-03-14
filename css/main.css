@@ -104,6 +104,10 @@ html {
   border-bottom: 1px solid #fff;
 }
 
+.todo__search {
+  padding: 15px 30px;
+}
+
 .todo__list {
   list-style-type: none;
   padding: 20px 0;
